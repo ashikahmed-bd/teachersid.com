@@ -70,7 +70,7 @@ const items = [
     <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
       <div class="h-20 flex items-center justify-between">
         <a href="/" class="flex items-center shrink-0">
-          <img src="/logo.png" alt="logo" class="h-10 w-auto object-contain" />
+          <img src="/logo.svg" alt="logo" class="h-10 w-auto object-contain" />
         </a>
 
         <nav class="hidden lg:flex items-center gap-2 px-2 py-2">
