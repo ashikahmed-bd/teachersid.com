@@ -252,206 +252,254 @@ const tutorGroups = [
 
 <template>
   <main>
-    <section class="relative overflow-hidden py-20 lg:py-28">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid items-center gap-12 lg:grid-cols-2">
-          <div>
-            <div class="max-w-2xl">
-              <h1
-                class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
-              >
-                A good
-                <span class="text-indigo-600">#education</span>
-                is always a base of
-              </h1>
 
-              <span
-                class="mt-4 block text-4xl font-bold text-indigo-600 sm:text-5xl"
-              >
-                Equitable soci
-              </span>
+    <section class="relative container mx-auto px-4 py-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="p-6">
+          <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
+            আপনার প্রিয় শিক্ষকের
+            <br />
+            সাথে
+            <span class="text-blue-600"> শিখুন, গড়ুন ভবিষ্যৎ</span>
+          </h1>
+          <p class="mt-8 text-xl text-gray-600 leading-9 max-w-xl">
+            দেশের সেরা শিক্ষকদের কোর্স, লাইভ ক্লাস ও নোটস পেয়ে
+            আপনার শেখার যাত্রাকে করুন আরও সহজ ও কার্যকর।
+          </p>
 
-              <p class="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-                Consectur adipiscing elitsedo eiusmod tempor incididuntem
-                utaborate dolore magna aliqua ad minim veniamque.
+          <div class="mt-10 flex bg-white rounded-2xl overflow-hidden shadow-xl shadow-blue-100 border border-gray-100">
+            <input type="text" placeholder="আপনার কাঙ্ক্ষিত কোর্স সার্চ করুন..."
+              class="flex-1 px-6 py-2.5 outline-none text-lg" />
+
+            <button class="bg-blue-600 hover:bg-blue-700 transition px-8 flex items-center justify-center text-white">
+              <Icon name="heroicons:magnifying-glass" class="w-7 h-7" />
+            </button>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
+            <div class="flex items-center gap-3">
+              <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center">
+                <Icon name="heroicons:book-open" class="w-6 h-6 text-blue-600" />
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">৫,০০০+</h4>
+                <p class="text-gray-500 text-sm">কোর্সসমূহ</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center">
+                <Icon name="heroicons:user-group" class="w-6 h-6 text-blue-600" />
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">১০,০০০+</h4>
+                <p class="text-gray-500 text-sm">শিক্ষক</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center">
+                <Icon name="heroicons:users" class="w-6 h-6 text-blue-600" />
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">১,০০,০০০+</h4>
+                <p class="text-gray-500 text-sm">শিক্ষার্থী</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center">
+                <Icon name="heroicons:star" class="w-6 h-6 text-blue-600" />
+              </div>
+
+              <div>
+                <h4 class="font-bold text-lg">৪.৮/৫</h4>
+                <p class="text-gray-500 text-sm">রেটিং</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden md:block">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200&auto=format&fit=crop"
+            class="rounded-3xl object-cover w-full h-full" />
+
+          <div class="absolute top-12 -right-2 space-y-5 px-10">
+            <div class="bg-white rounded-2xl shadow-2xl px-6 py-5 flex items-center gap-4 w-72">
+              <div class="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center">
+                <Icon name="heroicons:video-camera" class="w-7 h-7 text-blue-600" />
+              </div>
+              <div>
+                <h4 class="font-bold">লাইভ ক্লাস</h4>
+                <p class="text-sm text-gray-500">রিয়েল টাইমে শিখুন</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-2xl px-6 py-5 flex items-center gap-4 w-72">
+              <div class="w-14 h-14 rounded-xl bg-green-100 flex items-center justify-center">
+                <Icon name="heroicons:play-circle" class="w-7 h-7 text-green-600" />
+              </div>
+
+              <div>
+                <h4 class="font-bold">রেকর্ডেড ক্লাস</h4>
+                <p class="text-sm text-gray-500">যখন খুশি শিখুন</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-2xl px-6 py-5 flex items-center gap-4 w-72">
+              <div class="w-14 h-14 rounded-xl bg-purple-100 flex items-center justify-center">
+                <Icon name="heroicons:document-text" class="w-7 h-7 text-purple-600" />
+              </div>
+
+              <div>
+                <h4 class="font-bold">নোটস & রিসোর্স</h4>
+                <p class="text-sm text-gray-500">PDF ও স্টাডি ম্যাটেরিয়াল</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-2xl px-6 py-5 flex items-center gap-4 w-72">
+              <div class="w-14 h-14 rounded-xl bg-orange-100 flex items-center justify-center">
+                <Icon name="heroicons:trophy" class="w-7 h-7 text-orange-500" />
+              </div>
+
+              <div>
+                <h4 class="font-bold">সার্টিফিকেট</h4>
+                <p class="text-sm text-gray-500">কোর্স শেষে সার্টিফিকেট</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="bg-white">
+      <div class="container mx-auto px-6 py-14">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div class="flex gap-4">
+            <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center">
+              <Icon name="heroicons:user" class="w-7 h-7 text-blue-600" />
+            </div>
+
+            <div>
+              <h3 class="font-bold text-xl">অভিজ্ঞ শিক্ষক</h3>
+              <p class="text-gray-500 mt-1">
+                দেশের সেরা অভিজ্ঞ শিক্ষক
               </p>
-
-              <ul class="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center">
-                <li class="relative">
-                  <a
-                    href="signup.html"
-                    class="bg-primary inline-flex items-center gap-2 rounded-full px-7 py-4 text-base font-semibold text-white transition hover:scale-105"
-                  >
-                    <span>Start as student</span>
-                    <i class="icon icon-chevron-right"></i>
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="signup.html"
-                    class="inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-7 py-4 text-base font-semibold text-slate-900 transition hover:border-indigo-200 hover:scale-105"
-                  >
-                    <span>Join as Instructor</span>
-                    <em class="not-italic text-sm font-medium text-green-600"
-                      >It’s Free!</em
-                    >
-                  </a>
-                </li>
-              </ul>
-
-              <div class="mt-8 flex items-start gap-3">
-                <UIcon name="i-lucide-shield-check" class="size-5" />
-                <p class="text-sm leading-6 text-slate-600">
-                  You can also join as parent to explore
-                  <a
-                    href="signup.html"
-                    class="font-semibold text-indigo-600 hover:underline"
-                  >
-                    Join today
-                  </a>
-                </p>
-              </div>
             </div>
           </div>
 
-          <!-- Image -->
-          <div class="hidden lg:block">
-            <div class="relative">
-              <div
-                class="absolute inset-0 rounded-full bg-indigo-100 blur-3xl"
-              ></div>
-              <img
-                src="/banners/02.png"
-                alt="Education banner"
-                class="relative z-10 mx-auto max-w-full"
-              />
+          <div class="flex gap-4">
+            <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center">
+              <Icon name="heroicons:academic-cap" class="w-7 h-7 text-blue-600" />
+            </div>
+
+            <div>
+              <h3 class="font-bold text-xl">মানসম্মত কোর্স</h3>
+              <p class="text-gray-500 mt-1">
+                বাস্তবমুখী ও আপডেটেড কোর্স
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center">
+              <Icon name="heroicons:sparkles" class="w-7 h-7 text-blue-600" />
+            </div>
+
+            <div>
+              <h3 class="font-bold text-xl">সহজ শেখার অভিজ্ঞতা</h3>
+              <p class="text-gray-500 mt-1">
+                সহজ ইন্টারফেস ও গাইডলাইন
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center">
+              <Icon name="heroicons:shield-check" class="w-7 h-7 text-blue-600" />
+            </div>
+
+            <div>
+              <h3 class="font-bold text-xl">নিরাপদ পেমেন্ট</h3>
+              <p class="text-gray-500 mt-1">
+                ১০০% নিরাপদ লেনদেন
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-8 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4">
-        <UCarousel
-          :items="brands"
-          :ui="{
-            item: 'basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6',
-          }"
-          loop
-          autoplay
-          :autoplay="{ delay: 2000 }"
-        >
-          <template #default="{ item }">
-            <div
-              class="max-h-12 flex items-center justify-center bg-white transition"
-            >
-              <img
-                :src="item"
-                alt="brand"
-                class="w-full object-contain transition p-4"
-              />
-            </div>
-          </template>
-        </UCarousel>
+    <!-- Categories -->
+    <section class="container mx-auto px-6 lg:px-10 pb-20">
+
+      <div class="flex items-center justify-between mb-10">
+        <h2 class="text-4xl font-bold">জনপ্রিয় ক্যাটাগরি</h2>
+
+        <button class="text-blue-600 font-semibold flex items-center gap-2">
+          সব দেখুন
+          <Icon name="heroicons:arrow-right" class="w-5 h-5" />
+        </button>
       </div>
-    </section>
 
-    <section class="py-8 bg-white overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
-        >
-          <!-- Content -->
-          <div>
-            <h4 class="mb-3 text-base sm:text-lg font-semibold text-primary">
-              Better Learning. Better Results
-            </h4>
+      <div class="grid grid-cols-2 lg:grid-cols-6 gap-6">
 
-            <h2
-              class="max-w-xl text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-900"
-            >
-              Online education platform that fits for everyone
-            </h2>
-
-            <p
-              class="mt-5 max-w-xl text-base sm:text-lg leading-8 text-gray-600"
-            >
-              Accusamus et iusidio dignissimos ducimus blanditiis praesentium
-              voluptatum deleniti atque corrupti quos dolores etmquasa molestias
-              epturi sint occaecati cupiditate non providente mikume molareshe.
-            </p>
-
-            <NuxtLink
-              to="/how-it-work"
-              class="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm sm:text-base font-semibold text-white shadow-lg shadow-primary/20 transition hover:-translate-y-0.5 hover:shadow-xl"
-            >
-              <span>Explore more about us</span>
-              <UIcon name="i-lucide-chevron-right" class="size-5" />
-            </NuxtLink>
+        <div class="bg-[#f5f8ff] rounded-3xl p-8 hover:-translate-y-1 transition shadow-sm">
+          <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+            <Icon name="heroicons:academic-cap" class="w-8 h-8 text-blue-600" />
           </div>
 
-          <div class="relative">
-            <div class="relative mx-auto max-w-lg">
-              <div class="relative rounded-2xl bg-gray-50 p-4 sm:p-6">
-                <figure class="overflow-hidden rounded-xl">
-                  <img
-                    src="/platform/img-01.png"
-                    alt="online learning platform"
-                    class="w-full object-cover"
-                  />
-                </figure>
+          <h3 class="font-bold text-xl">স্কুল বিষয়ক</h3>
+          <p class="text-gray-500 mt-2">১,২০০+ কোর্স</p>
+        </div>
 
-                <img
-                  src="/platform/img-02.png"
-                  alt="student"
-                  class="absolute -bottom-6 -left-3 sm:-left-8 w-32 sm:w-44 rounded-3xl border-4 border-white"
-                />
-
-                <div
-                  class="absolute -bottom-5 right-4 sm:right-8 rounded-2xl bg-white px-5 py-4 border border-gray-100"
-                >
-                  <h6
-                    class="text-xs font-semibold uppercase tracking-wide text-gray-500"
-                  >
-                    Founder & CEO
-                  </h6>
-                  <h5 class="mt-1 text-base sm:text-lg font-bold text-gray-900">
-                    Allen Wake
-                  </h5>
-                </div>
-              </div>
-            </div>
+        <div class="bg-[#f4fbf7] rounded-3xl p-8 hover:-translate-y-1 transition shadow-sm">
+          <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
+            <Icon name="heroicons:building-library" class="w-8 h-8 text-green-600" />
           </div>
+
+          <h3 class="font-bold text-xl">ভর্তি প্রস্তুতি</h3>
+          <p class="text-gray-500 mt-2">৮৫০+ কোর্স</p>
+        </div>
+
+        <div class="bg-[#fff8f1] rounded-3xl p-8 hover:-translate-y-1 transition shadow-sm">
+          <div class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mb-6">
+            <Icon name="heroicons:briefcase" class="w-8 h-8 text-orange-500" />
+          </div>
+
+          <h3 class="font-bold text-xl">চাকরি প্রস্তুতি</h3>
+          <p class="text-gray-500 mt-2">১,৫০০+ কোর্স</p>
+        </div>
+
+        <div class="bg-[#faf5ff] rounded-3xl p-8 hover:-translate-y-1 transition shadow-sm">
+          <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-6">
+            <Icon name="heroicons:chart-bar" class="w-8 h-8 text-purple-600" />
+          </div>
+
+          <h3 class="font-bold text-xl">স্কিল ডেভেলপমেন্ট</h3>
+          <p class="text-gray-500 mt-2">৭৫০+ কোর্স</p>
+        </div>
+
+        <div class="bg-[#fff5f7] rounded-3xl p-8 hover:-translate-y-1 transition shadow-sm">
+          <div class="w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center mb-6">
+            <Icon name="heroicons:book-open" class="w-8 h-8 text-pink-600" />
+          </div>
+
+          <h3 class="font-bold text-xl">ভাষা শিক্ষা</h3>
+          <p class="text-gray-500 mt-2">৬০০+ কোর্স</p>
+        </div>
+
+        <div class="bg-[#f8f8fb] rounded-3xl p-8 hover:-translate-y-1 transition shadow-sm">
+          <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-6">
+            <Icon name="heroicons:ellipsis-horizontal" class="w-8 h-8 text-gray-600" />
+          </div>
+
+          <h3 class="font-bold text-xl">অন্যান্য</h3>
+          <p class="text-gray-500 mt-2">৫০০+ কোর্স</p>
         </div>
       </div>
     </section>
 
-    <section id="counter-section" class="py-8 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div
-            v-for="(stat, i) in stats"
-            :key="i"
-            class="rounded-3xl bg-white border border-border hover:border-primary p-4 text-center transition"
-          >
-            <img :src="stat.icon" alt="icon" class="mx-auto mb-4 h-12 w-auto" />
-
-            <h4 class="text-2xl sm:text-3xl font-bold text-gray-900">
-              {{ counters[i].toLocaleString() }}
-              <span class="text-primary">
-                {{ stat.suffix }}
-              </span>
-            </h4>
-
-            <p class="mt-3 text-sm text-gray-600 leading-6">
-              {{ stat.label }}
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section class="py-8 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -468,24 +516,17 @@ const tutorGroups = [
           </p>
         </div>
 
-        <UCarousel
-          :items="instructors"
-          loop
-          :autoplay="{ delay: 2000 }"
-          :ui="{
-            item: 'basis-full sm:basis-1/2 lg:basis-1/3',
-          }"
-        >
+        <UCarousel :items="instructors" loop :autoplay="{ delay: 2000 }" :ui="{
+          item: 'basis-full sm:basis-1/2 lg:basis-1/3',
+        }">
           <template #default="{ item }">
             <InstructorCard :instructor="item" />
           </template>
         </UCarousel>
 
         <div class="text-center mt-12">
-          <NuxtLink
-            to="/search-listing"
-            class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold shadow hover:shadow-lg transition"
-          >
+          <NuxtLink to="/search-listing"
+            class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold shadow hover:shadow-lg transition">
             Explore all instructors
             <UIcon name="i-lucide-chevron-right" class="size-5" />
           </NuxtLink>
@@ -496,61 +537,37 @@ const tutorGroups = [
     <section class="relative overflow-hidden bg-gray-50 py-8">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mb-10 max-w-3xl">
-          <h2
-            class="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl"
-          >
+          <h2 class="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
             See how our visitors & members made their
             <span class="text-primary">#Success Stories</span>
           </h2>
         </div>
 
-        <UCarousel
-          :items="stories"
-          loop
-          dots
-          fade
-          :autoplay="{ delay: 3500 }"
-          :ui="{
-            item: 'basis-full',
-          }"
-        >
+        <UCarousel :items="stories" loop dots fade :autoplay="{ delay: 3500 }" :ui="{
+          item: 'basis-full',
+        }">
           <template #default="{ item }">
             <article
-              class="border border-border hover:border-primary grid items-center gap-8 rounded-2xl bg-white p-4 md:grid-cols-2"
-            >
+              class="border border-border hover:border-primary grid items-center gap-8 rounded-2xl bg-white p-4 md:grid-cols-2">
               <div class="relative">
-                <img
-                  :src="item.image"
-                  :alt="item.name"
-                  class="h-72 w-full rounded-xl object-cover sm:h-96"
-                />
+                <img :src="item.image" :alt="item.name" class="h-72 w-full rounded-xl object-cover sm:h-96" />
 
                 <div
-                  class="absolute -bottom-5 right-6 grid size-16 place-items-center rounded-2xl bg-primary shadow-lg"
-                >
+                  class="absolute -bottom-5 right-6 grid size-16 place-items-center rounded-2xl bg-primary shadow-lg">
                   <UIcon name="i-lucide-quote" class="size-8 text-white" />
                 </div>
               </div>
 
               <div class="pt-6 md:pt-0">
                 <div class="mb-5 flex text-yellow-400">
-                  <UIcon
-                    v-for="i in 5"
-                    :key="i"
-                    name="i-lucide-star"
-                    class="size-5 fill-current"
-                  />
+                  <UIcon v-for="i in 5" :key="i" name="i-lucide-star" class="size-5 fill-current" />
                 </div>
 
-                <h3
-                  class="text-2xl font-bold leading-snug text-gray-900 lg:text-3xl"
-                >
+                <h3 class="text-2xl font-bold leading-snug text-gray-900 lg:text-3xl">
                   {{ item.title }}
                 </h3>
 
-                <blockquote
-                  class="mt-5 text-base leading-8 text-gray-600 lg:text-lg"
-                >
+                <blockquote class="mt-5 text-base leading-8 text-gray-600 lg:text-lg">
                   “{{ item.text }}”
                 </blockquote>
 
@@ -569,116 +586,42 @@ const tutorGroups = [
       </div>
     </section>
 
-    <section class="py-8 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <h4 class="text-primary font-semibold mb-2">
-            Let’s make a quick start today
-          </h4>
-          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
-            Choose from the top visited categories you may like
-          </h2>
-          <p class="mt-4 text-gray-600">
-            Accusamus et iusidio dignissimos ducimus blanditiis praesentium
-            voluptatum deleniti atque corrupti quos dolores.
-          </p>
-        </div>
 
-        <UCarousel
-          :items="categories"
-          loop
-          dots
-          :autoplay="{ delay: 5000 }"
-          :ui="{
-            item: 'basis-1/2 sm:basis-1/3 lg:basis-1/4',
-          }"
-        >
-          <template #default="{ item }">
-            <div class="p-2">
-              <NuxtLink
-                to="/search-listing"
-                class="group block overflow-hidden rounded-2xl border border-border bg-white transition"
-              >
-                <div class="relative h-48 overflow-hidden">
-                  <img
-                    :src="item.image"
-                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                  />
-                </div>
+    <!-- CTA Section -->
+    <section class="container mx-auto px-6 lg:px-10 pb-24">
+      <div class="rounded-[40px] bg-gradient-to-r from-blue-600 to-indigo-700 overflow-hidden relative">
 
-                <div class="p-5">
-                  <h6
-                    class="text-base font-semibold text-gray-900 group-hover:text-primary transition"
-                  >
-                    {{ item.title }}
-                  </h6>
+        <div class="grid lg:grid-cols-2 items-center">
 
-                  <span class="text-sm text-gray-500">
-                    {{ item.count }}
-                  </span>
-                </div>
-              </NuxtLink>
+          <div class="p-10 lg:p-16 text-white">
+            <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight">
+              আজই শেখা শুরু করুন
+            </h2>
+
+            <p class="mt-6 text-blue-100 text-lg leading-8 max-w-xl">
+              হাজারো শিক্ষার্থীর সাথে যুক্ত হয়ে আপনার ক্যারিয়ার ও
+              দক্ষতাকে নিয়ে যান নতুন উচ্চতায়।
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-10">
+              <button class="px-8 py-4 rounded-2xl bg-white text-blue-700 font-bold hover:scale-105 transition">
+                ফ্রি কোর্স দেখুন
+              </button>
+
+              <button
+                class="px-8 py-4 rounded-2xl border border-white/30 text-white font-bold hover:bg-white/10 transition">
+                শিক্ষক হিসেবে যোগ দিন
+              </button>
             </div>
-          </template>
-        </UCarousel>
+          </div>
 
-        <!-- Button -->
-        <div class="text-center mt-12">
-          <NuxtLink
-            to="/search-listing"
-            class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold shadow hover:shadow-lg transition"
-          >
-            Explore All categories
-            <UIcon name="i-lucide-chevron-right" class="size-5" />
-          </NuxtLink>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-gray-950 py-8">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mb-12 text-center">
-          <h5 class="text-base font-semibold text-primary">
-            Explore from our huge collection
-          </h5>
-          <h3 class="mt-3 text-3xl font-bold text-white sm:text-4xl">
-            Approach tutors near to your house
-          </h3>
-        </div>
-
-        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <div
-            v-for="group in tutorGroups"
-            :key="group.title + group.links[0]"
-            class="rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:bg-white/[0.06]"
-          >
-            <h5 class="mb-4 text-lg font-bold text-white">
-              {{ group.title }}
-            </h5>
-
-            <ul class="space-y-3">
-              <li v-for="link in group.links" :key="link">
-                <NuxtLink
-                  to="/search-listing"
-                  class="text-sm text-gray-400 transition hover:text-primary"
-                >
-                  {{ link }}
-                </NuxtLink>
-              </li>
-
-              <li class="pt-2">
-                <NuxtLink
-                  to="/search-listing"
-                  class="inline-flex items-center gap-1 text-sm font-semibold text-primary"
-                >
-                  Explore all
-                  <UIcon name="i-lucide-arrow-right" class="size-4" />
-                </NuxtLink>
-              </li>
-            </ul>
+          <div class="hidden lg:flex justify-end">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+              class="h-full object-cover" />
           </div>
         </div>
       </div>
     </section>
+
   </main>
 </template>
