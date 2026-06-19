@@ -1,104 +1,12 @@
 <script setup>
-const activeTab = ref("intro");
-const selectedImage = ref("/tutordetail/slider/img-01.jpg");
-
-const languages = [
-  "English",
-  "Arabic",
-  "Chinese",
-  "Hebrew",
-  "French",
-  "Spanish",
-];
-
-const education = [
+const { data: courses } = await useAsyncData(
+  'courses',
+  () => $fetch('/data/courses.json'),
   {
-    title: "MBBS, MD, DM Rheumatology",
-    university: "University of Florida",
-    location: "San Francisco, TN",
-    date: "June 2018 - Present",
-    description:
-      "Experienced in modern teaching methods with strong academic background.",
-  },
-  {
-    title: "MBBS, MS, Mch Neurosurgery",
-    university: "University of Massachusetts-Amherst",
-    location: "Kansas City, LA",
-    date: "January 2014 - May 2018",
-    description:
-      "Focused on practical learning, student guidance, and exam preparation.",
-  },
-];
-
-const teachGroups = [
-  {
-    title: "Class 9 - 10",
-    subjects: [
-      "Computer Science",
-      "Mathematics",
-      "General Science",
-      "English",
-      "Islamiat",
-    ],
-  },
-  {
-    title: "Class 6 - 8",
-    subjects: ["Mathematics", "Computer Science", "General Science", "English"],
-  },
-  {
-    title: "Short courses",
-    subjects: ["Physical education", "History", "Basic French", "Learn ESL"],
-  },
-];
-
-const gallery = [
-  "/tutordetail/slider/img-01.jpg",
-  "/tutordetail/slider/img-02.jpg",
-  "/tutordetail/slider/img-03.jpg",
-  "/tutordetail/slider/img-04.jpg",
-  "/tutordetail/slider/img-05.jpg",
-];
-
-const reviews = [
-  {
-    name: "Ronnie Montgomery",
-    image: "/tutordetail/review/img-01.png",
-    rating: 5,
-    time: "02 sec ago",
-    text: "Amazing tutor. Very clear explanation and friendly teaching style.",
-  },
-  {
-    name: "Margaret Hansen",
-    image: "/tutordetail/review/img-02.png",
-    rating: 4,
-    time: "05 days ago",
-    text: "Great experience. The tutor explains difficult topics in a simple way.",
-  },
-];
-
-const relatedTutors = [
-  {
-    name: "William Williams",
-    location: "Nashville, IL",
-    price: "$1,198.12/hr",
-    image: "/qualified/img-04.jpg",
-    avatar: "/professionol/img-04.jpg",
-  },
-  {
-    name: "Gwendolyn Parker",
-    location: "Las Vegas, TN",
-    price: "$1,385.10/hr",
-    image: "/qualified/img-02.jpg",
-    avatar: "/professionol/img-02.jpg",
-  },
-  {
-    name: "Dwayne Garrett",
-    location: "Arlington, TN",
-    price: "$893.30/hr",
-    image: "/qualified/img-01.jpg",
-    avatar: "/professionol/img-01.jpg",
-  },
-];
+    default: () => [],
+    server: false
+  }
+)
 
 const carousel = ref();
 const activeIndex = ref(0);
@@ -133,7 +41,6 @@ function onClickNext() {
 
 <template>
   <main class="bg-gray-50">
-    <!-- Breadcrumb -->
     <section class="bg-white">
       <div class="container mx-auto px-4 lg:px-8 py-4">
         <div class="flex items-center gap-2 text-sm text-gray-500">
@@ -146,23 +53,14 @@ function onClickNext() {
       </div>
     </section>
 
-
     <section class="container mx-auto px-4 lg:px-8 py-8">
       <div class="grid gap-6 xl:grid-cols-[1fr_340px]">
         <div class="space-y-6">
           <section class="bg-white rounded-3xl border border-gray-100 p-6">
             <div class="grid lg:grid-cols-12 gap-6">
               <div class="lg:col-span-4">
-                <div class="relative">
-                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=900&auto=format&fit=crop"
-                    class="rounded-2xl h-full w-full object-cover" />
-
-                  <div
-                    class="absolute bottom-4 left-4 bg-green-500 text-white text-sm px-3 py-1 rounded-full flex items-center gap-2">
-                    <span class="w-2 h-2 bg-white rounded-full"></span>
-                    অনলাইন
-                  </div>
-                </div>
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=900&auto=format&fit=crop"
+                  class="rounded-2xl h-full w-full object-cover" />
               </div>
 
               <div class="lg:col-span-8">
@@ -170,35 +68,28 @@ function onClickNext() {
                   <h1 class="text-4xl font-extrabold text-gray-900">
                     রাকিবুল ইসলাম
                   </h1>
-
                   <Icon name="heroicons:check-badge-solid" class="w-7 h-7 text-blue-600" />
                 </div>
-
                 <p class="text-gray-500 mt-2 text-lg">
                   গণিত শিক্ষক
                 </p>
 
-                <!-- Tags -->
-                <div class="flex flex-wrap gap-3 mt-5">
+                <div class="flex flex-wrap gap-3 py-2">
                   <span class="px-4 py-2 bg-gray-100 rounded-xl text-sm font-medium">
                     SSC
                   </span>
-
                   <span class="px-4 py-2 bg-gray-100 rounded-xl text-sm font-medium">
                     HSC
                   </span>
-
                   <span class="px-4 py-2 bg-gray-100 rounded-xl text-sm font-medium">
                     Admission
                   </span>
-
                   <span class="px-4 py-2 bg-gray-100 rounded-xl text-sm font-medium">
                     Varsity
                   </span>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-4 mt-6">
-
+                <div class="grid md:grid-cols-2 gap-4 py-2">
                   <div class="flex items-center gap-3 text-gray-700">
                     <Icon name="heroicons:briefcase" class="w-5 h-5 text-blue-600" />
                     <span>অভিজ্ঞতা: ৬+ বছর</span>
@@ -220,21 +111,23 @@ function onClickNext() {
                   </div>
                 </div>
 
-                <p class="mt-6 text-gray-600 leading-8">
-                  আমি রাকিবুল ইসলাম, গণিত ও উচ্চতর গণিতের একজন অভিজ্ঞ শিক্ষক।
-                  গত ৬ বছরের বেশি সময় ধরে অনলাইন ও অফলাইনে শিক্ষার্থীদের
-                  পড়িয়ে আসছি। সহজ ও কার্যকর পদ্ধতিতে গণিত শেখানোই আমার মূল লক্ষ্য।
-                </p>
+                <div class="text-body py-2.5">
+                  <p>
+                    আমি রাকিবুল ইসলাম, গণিত ও উচ্চতর গণিতের একজন অভিজ্ঞ শিক্ষক।
+                    গত ৬ বছরের বেশি সময় ধরে অনলাইন ও অফলাইনে শিক্ষার্থীদের
+                    পড়িয়ে আসছি। সহজ ও কার্যকর পদ্ধতিতে গণিত শেখানোই আমার মূল লক্ষ্য।
+                  </p>
+                </div>
 
                 <div class="flex flex-wrap gap-4 mt-8">
                   <button
-                    class="px-6 py-2.5 border border-primary rounded font-semibold flex items-center gap-2 hover:bg-gray-50">
+                    class="px-4 py-2.5 border border-border rounded font-semibold flex items-center gap-2 hover:bg-gray-50">
                     <Icon name="mdi:whatsapp" class="w-5 h-5 text-green-500" />
                     WhatsApp করুন
                   </button>
 
                   <button
-                    class="px-6 py-2.5 border border-primary rounded font-semibold flex items-center gap-2 hover:bg-gray-50">
+                    class="px-4 py-2.5 border border-border rounded font-semibold flex items-center gap-2 hover:bg-gray-50">
                     <Icon name="heroicons:heart" class="w-5 h-5 text-red-500" />
                     রিপোর্ট করুন
                   </button>
@@ -286,63 +179,11 @@ function onClickNext() {
               </h3>
             </div>
 
-            <UCarousel :items="relatedTutors" loop :autoplay="{ delay: 3000 }" :ui="{
-              item: 'basis-full md:basis-1/2 xl:basis-1/3',
+            <UCarousel v-if="courses?.length" :items="courses" loop :autoplay="{ delay: 3000 }" :ui="{
+              item: 'basis-full md:basis-1/2 xl:basis-1/3'
             }">
-              <template #default="{ item: tutor }">
-                <article
-                  class="overflow-hidden rounded-xl border border-border hover:border-primary bg-white transition duration-300 hover:-translate-y-1">
-                  <div class="relative h-44">
-                    <img :src="tutor.image" class="h-full w-full object-cover" :alt="tutor.name" />
-
-                    <span
-                      class="absolute left-3 top-3 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white">
-                      FEATURED
-                    </span>
-                  </div>
-
-                  <div class="p-5">
-                    <div class="flex items-center gap-3">
-                      <img :src="tutor.avatar" :alt="tutor.name" class="size-12 rounded-full object-cover" />
-
-                      <div>
-                        <h4 class="flex items-center gap-1 font-bold text-gray-900">
-                          {{ tutor.name }}
-                          <UIcon name="i-lucide-badge-check" class="size-4 text-green-500" />
-                        </h4>
-
-                        <p class="text-sm text-gray-500">
-                          {{ tutor.location }}
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class="mt-4 space-y-2 text-sm text-gray-600">
-                      <p>
-                        Starting from:
-                        <strong class="text-gray-900">{{ tutor.price }}</strong>
-                      </p>
-
-                      <p>
-                        Qualification:
-                        <strong class="text-gray-900">B.Tech/B.E.</strong>
-                      </p>
-                    </div>
-
-                    <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-4">
-                      <div class="flex items-center gap-1">
-                        <UIcon name="i-lucide-star" class="size-4 fill-current text-yellow-400" />
-                        <strong class="text-sm">5.0</strong>
-                        <span class="text-xs text-gray-500">(4,448)</span>
-                      </div>
-
-                      <button
-                        class="grid size-9 place-items-center rounded-full border border-gray-200 transition hover:text-red-500">
-                        <UIcon name="i-lucide-heart" class="size-4" />
-                      </button>
-                    </div>
-                  </div>
-                </article>
+              <template #default="{ item: course }">
+                <CourseCard :course="course" />
               </template>
             </UCarousel>
           </section>

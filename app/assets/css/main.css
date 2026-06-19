@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap');
+
 @import "tailwindcss";
 @import "@nuxt/ui";
 
 @theme {
-  --color-primary: #155dfc;
-  --color-primary-hover: #155dfc;
+  --color-primary: #021644;
+  --color-primary-hover: #021644;
 
-  --color-accent: #155dfc;
-  --color-accent-hover: #155dfc;
+  --color-accent: #0163E9;
+  --color-accent-hover: #0163E9;
 
   --color-background: #faf7f2;
   --color-surface: #ecfdf5;
@@ -21,7 +21,7 @@
   --color-danger: #ef4444;
   --color-info: #3b82f6;
 
-  --color-title: #0f172a;
+  --color-title: #021644;
   --color-body: #334155;
   --color-muted: #64748b;
 
@@ -29,21 +29,11 @@
   --color-dark: #1a1a1a;
   --color-white: #ffffff;
 
-  --font-heading: "Baloo Da 2", sans-serif;
-  --font-body: "Baloo Da 2", sans-serif;
+  --font-heading: "Noto Serif Bengali", serif;
+  --font-body: "Noto Serif Bengali", serif;
 }
 
 @layer base {
-  html {
-    font-family: "Baloo Da 2", sans-serif;
-    line-height: 1.6;
-    scroll-behavior: smooth;
-  }
-
-  body {
-    color: var(--color-body, #1f2937);
-    background-color: var(--color-background, #f9fafb);
-  }
 
   blockquote {
     @apply border-l-4 border-emerald-300 pl-4 italic text-slate-600 mb-4;

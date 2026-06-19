@@ -4,9 +4,8 @@ const isOpen = ref(false);
 const navItems = [
   { label: "হোম", to: "/" },
   { label: "কোর্সসমূহ", to: "/courses" },
-  { label: "শিক্ষকগণ", to: "/tutors" },
+  { label: "শিক্ষকগণ", to: "/teachers" },
   { label: "ব্লগ", to: "/blog" },
-  { label: "যোগাযোগ", to: "/pricing" },
   { label: "যোগাযোগ", to: "/contact" },
 ];
 

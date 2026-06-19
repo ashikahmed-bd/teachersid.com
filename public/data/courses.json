@@ -1,0 +1,82 @@
+[
+  {
+    "id": "564gfdg",
+    "slug": "class-7-mathematics",
+    "title": "Class 7 Mathematics Complete Course",
+    "description": "Chapter-wise video lessons, quizzes, assignments and exam preparation.",
+    "image": "/courses/class-7-math.jpg",
+    "lessons": 48,
+    "duration": "32 Hours",
+    "price": 1500,
+    "currency": "৳",
+    "rating": 4.9,
+    "reviews": 1250,
+    "category": "class-7",
+    "level": "beginner",
+    "is_published": true,
+    "instructor": {
+      "name": "John Doe",
+      "avatar": "/instructors/john.jpg"
+    }
+  },
+  {
+    "id": "a8k2p9x",
+    "slug": "class-6-basic-math",
+    "title": "Class 6 Basic Mathematics",
+    "description": "Foundation math course for class 6 students with easy explanations.",
+    "image": "/courses/class-6-math.jpg",
+    "lessons": 35,
+    "duration": "24 Hours",
+    "price": 999,
+    "currency": "৳",
+    "rating": 4.8,
+    "reviews": 860,
+    "category": "class-6",
+    "level": "beginner",
+    "is_published": true,
+    "instructor": {
+      "name": "Sarah Khan",
+      "avatar": "/instructors/sarah.jpg"
+    }
+  },
+  {
+    "id": "x91k3lm",
+    "slug": "class-8-science",
+    "title": "Class 8 Science Complete Course",
+    "description": "Physics, Chemistry, Biology explained with real-life examples.",
+    "image": "/courses/class-8-science.jpg",
+    "lessons": 52,
+    "duration": "40 Hours",
+    "price": 1800,
+    "currency": "৳",
+    "rating": 4.7,
+    "reviews": 940,
+    "category": "class-8",
+    "level": "intermediate",
+    "is_published": true,
+    "instructor": {
+      "name": "Abdul Karim",
+      "avatar": "/instructors/abdul.jpg"
+    }
+  },
+  {
+    "id": "p9k2m1z",
+    "slug": "class-10-physics",
+    "title": "Class 10 Physics Full Course",
+    "description": "Complete SSC physics preparation with concepts and problem solving.",
+    "image": "/courses/class-10-physics.jpg",
+    "lessons": 60,
+    "duration": "45 Hours",
+    "price": 2200,
+    "currency": "৳",
+    "rating": 4.9,
+    "reviews": 2100,
+    "category": "class-10",
+    "level": "advanced",
+    "is_published": true,
+    "instructor": {
+      "name": "Md. Rahim",
+      "avatar": "/instructors/rahim.jpg"
+    }
+  }
+]

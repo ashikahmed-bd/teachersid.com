@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="min-h-screen bg-background text-body font-body">
+  <div class="min-h-screen text-body font-body">
     <Header />
     <slot />
     <Footer />
