@@ -71,8 +71,7 @@ const instructors = [
     price: "$893.30/hr",
     rating: 5.0,
     reviews: "66,951",
-    image: "/qualified/img-01.jpg",
-    avatar: "/professionol/img-01.jpg",
+    image: "/teachers/1.jpg",
   },
   {
     name: "Gwendolyn Parker",
@@ -80,8 +79,7 @@ const instructors = [
     price: "$1,385.10/hr",
     rating: 5.0,
     reviews: "38,494",
-    image: "/qualified/img-02.jpg",
-    avatar: "/professionol/img-02.jpg",
+    image: "/teachers/2.jpg",
   },
   {
     name: "Glen Burns",
@@ -89,8 +87,7 @@ const instructors = [
     price: "$1,336.83/hr",
     rating: 5.0,
     reviews: "47,044",
-    image: "/qualified/img-03.jpg",
-    avatar: "/professionol/img-03.jpg",
+    image: "/teachers/3.jpg",
   },
   {
     name: "William Williams",
@@ -98,35 +95,34 @@ const instructors = [
     price: "$1,198.12/hr",
     rating: 5.0,
     reviews: "57,282",
-    image: "/qualified/img-04.jpg",
-    avatar: "/professionol/img-04.jpg",
+    image: "/teachers/4.jpg",
   },
 ];
 
 const stories = [
   {
-    name: "Leonard Sullivan",
-    role: "2nd Standard, Manchester UK",
-    image: "/success_stories/img-01.jpg",
-    title:
-      "I highly recommend this platform, amazing experience with fast delivery",
-    text: "Their teaching method is conceptual, motivating and friendly. I can clear my doubt any time. They have very deep knowledge of subject and exam pattern, with all the guidance of their tutors, I scored 98% in Mathematics and 96% in Physics.",
+    teacherId: 1,
+    name: "মোঃ রাকিবুল ইসলাম",
+    role: "ওয়েব ডেভেলপমেন্ট ইন্সট্রাক্টর",
+    image: "/teachers/1.jpg",
+    title: "অনলাইনে ৫,০০০+ শিক্ষার্থীকে প্রশিক্ষণ দিয়েছি",
+    text: "এই প্ল্যাটফর্মের মাধ্যমে আমি দেশ-বিদেশের হাজারো শিক্ষার্থীর কাছে আমার কোর্স পৌঁছে দিতে পেরেছি। কোর্স ম্যানেজমেন্ট, পেমেন্ট ও শিক্ষার্থী ব্যবস্থাপনা সবকিছুই খুব সহজ।",
   },
   {
-    name: "Deanna Griffin",
-    role: "2nd Standard, Manchester UK",
-    image: "/success_stories/img-02.jpg",
-    title:
-      "I highly recommend this platform, amazing experience with fast delivery",
-    text: "Their teaching method is conceptual, motivating and friendly. I can clear my doubt any time. They have very deep knowledge of subject and exam pattern.",
+    teacherId: 2,
+    name: "সাবরিনা সুলতানা",
+    role: "গ্রাফিক ডিজাইন ইন্সট্রাক্টর",
+    image: "/teachers/2.jpg",
+    title: "নিজের দক্ষতাকে সফল অনলাইন ব্যবসায় রূপ দিয়েছি",
+    text: "প্ল্যাটফর্মটির মাধ্যমে আমি সহজেই কোর্স প্রকাশ করতে পারি এবং শিক্ষার্থীদের সাথে সরাসরি যোগাযোগ রাখতে পারি। ফলে আমার আয় এবং শিক্ষার্থীর সংখ্যা দুটোই বৃদ্ধি পেয়েছে।",
   },
   {
-    name: "Bruce Mccarthy",
-    role: "2nd Standard, Manchester UK",
-    image: "/success_stories/img-03.jpg",
-    title:
-      "I highly recommend this platform, amazing experience with fast delivery",
-    text: "With the guidance of their tutors, I scored 98% in Mathematics and 96% in Physics. The overall learning experience was amazing.",
+    teacherId: 3,
+    name: "আবদুল্লাহ আল মামুন",
+    role: "ডিজিটাল মার্কেটিং ইন্সট্রাক্টর",
+    image: "/teachers/3.jpg",
+    title: "একটি শক্তিশালী ব্যক্তিগত ব্র্যান্ড তৈরি করতে পেরেছি",
+    text: "উচ্চমানের কোর্স প্রকাশ এবং শিক্ষার্থীদের ইতিবাচক রিভিউ আমাকে একজন বিশ্বস্ত প্রশিক্ষক হিসেবে প্রতিষ্ঠিত করেছে।",
   },
 ];
 
@@ -458,87 +454,98 @@ const categories = [
     <section class="relative overflow-hidden bg-gray-50 py-8">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mb-10 max-w-3xl">
-          <h2 class="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
-            See how our visitors & members made their
-            <span class="text-primary">#Success Stories</span>
-          </h2>
+          <h2 class="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl"> আমাদের সফল <span
+              class="text-primary">#শিক্ষকগণ</span> </h2>
+          <p class="mt-4 text-lg text-gray-600"> অভিজ্ঞ প্রশিক্ষকদের সাথে শিখুন এবং আপনার দক্ষতাকে নতুন উচ্চতায় নিয়ে
+            যান। </p>
         </div>
-
-        <UCarousel :items="stories" loop dots fade :autoplay="{ delay: 3500 }" :ui="{
-          item: 'basis-full',
-        }">
-          <template #default="{ item }">
-            <article
-              class="border border-border hover:border-primary grid items-center gap-8 rounded-2xl bg-white p-4 md:grid-cols-2">
-              <div class="relative">
-                <img :src="item.image" :alt="item.name" class="h-72 w-full rounded-xl object-cover sm:h-96" />
-
-                <div
-                  class="absolute -bottom-5 right-6 grid size-16 place-items-center rounded-2xl bg-primary shadow-lg">
-                  <UIcon name="i-lucide-quote" class="size-8 text-white" />
+        <UCarousel :items="stories" loop fade :autoplay="{ delay: 3500 }" :ui="{ item: 'basis-full', }"> <template
+            #default="{ item }">
+            <NuxtLink :to="`/teachers/${item.slug}`">
+              <article
+                class="border border-border grid items-center gap-8 rounded-2xl bg-white p-4 transition-all duration-300 hover:shadow-xl md:grid-cols-2">
+                <div class="relative">
+                  <img :src="item.image" :alt="item.name" class="h-72 w-full rounded-xl object-cover sm:h-96" />
+                  <div
+                    class="absolute -bottom-5 right-6 grid size-16 place-items-center rounded-2xl bg-primary shadow-lg">
+                    <UIcon name="i-lucide-graduation-cap" class="size-8 text-white" />
+                  </div>
                 </div>
-              </div>
-
-              <div class="pt-6 md:pt-0">
-                <div class="mb-5 flex text-yellow-400">
-                  <UIcon v-for="i in 5" :key="i" name="i-lucide-star" class="size-5 fill-current" />
+                <div class="pt-6 md:pt-0">
+                  <div class="mb-5 flex text-yellow-400">
+                    <UIcon v-for="i in 5" :key="i" name="i-lucide-star" class="size-5 fill-current" />
+                  </div>
+                  <h3 class="text-2xl font-bold leading-snug text-gray-900 lg:text-3xl"> {{ item.title }} </h3>
+                  <blockquote class="mt-5 text-base leading-8 text-gray-600 lg:text-lg"> “{{ item.text }}” </blockquote>
+                  <div class="mt-7">
+                    <h4 class="text-lg font-bold text-gray-900"> {{ item.name }} </h4>
+                    <p class="mt-1 text-sm text-gray-500"> {{ item.role }} </p>
+                    <div class="mt-4 inline-flex items-center gap-2 text-primary font-semibold"> প্রোফাইল দেখুন
+                      <UIcon name="i-lucide-arrow-right" class="size-4" />
+                    </div>
+                  </div>
                 </div>
-
-                <h3 class="text-2xl font-bold leading-snug text-gray-900 lg:text-3xl">
-                  {{ item.title }}
-                </h3>
-
-                <blockquote class="mt-5 text-base leading-8 text-gray-600 lg:text-lg">
-                  “{{ item.text }}”
-                </blockquote>
-
-                <div class="mt-7">
-                  <h4 class="text-lg font-bold text-gray-900">
-                    {{ item.name }}
-                  </h4>
-                  <p class="mt-1 text-sm text-gray-500">
-                    {{ item.role }}
-                  </p>
-                </div>
-              </div>
-            </article>
-          </template>
-        </UCarousel>
+              </article>
+            </NuxtLink>
+          </template> </UCarousel>
       </div>
     </section>
 
 
-    <!-- CTA Section -->
-    <section class="container mx-auto px-6 lg:px-10 pb-24">
-      <div class="rounded-[40px] bg-gradient-to-r from-blue-600 to-indigo-700 overflow-hidden relative">
+    <section class="container mx-auto px-6 lg:px-10 py-24">
+      <div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950">
+        <div class="relative grid items-center gap-12 lg:grid-cols-2">
+          <div class="p-8 space-y-4">
+            <span
+              class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-blue-200 backdrop-blur">
+              ৫০,০০০+ শিক্ষার্থী ইতোমধ্যে যুক্ত হয়েছে
+            </span>
 
-        <div class="grid lg:grid-cols-2 items-center">
-
-          <div class="p-10 lg:p-16 text-white">
-            <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight">
-              আজই শেখা শুরু করুন
+            <h2 class="text-2xl font-black leading-tight text-white lg:text-5xl">
+              আজই শুরু করুন
+              <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                আপনার শেখার যাত্রা
+              </span>
             </h2>
 
-            <p class="mt-6 text-blue-100 text-lg leading-8 max-w-xl">
-              হাজারো শিক্ষার্থীর সাথে যুক্ত হয়ে আপনার ক্যারিয়ার ও
-              দক্ষতাকে নিয়ে যান নতুন উচ্চতায়।
+            <p class="max-w-2xl text-sm leading-8 text-slate-300 lg:text-base">
+              ইন্ডাস্ট্রি এক্সপার্টদের কাছ থেকে শিখুন, সার্টিফিকেট অর্জন করুন
+              এবং আপনার ক্যারিয়ারকে নিয়ে যান পরবর্তী স্তরে।
             </p>
 
-            <div class="flex flex-wrap gap-4 mt-10">
-              <button class="px-8 py-4 rounded-2xl bg-white text-blue-700 font-bold hover:scale-105 transition">
-                ফ্রি কোর্স দেখুন
-              </button>
+            <div class="flex flex-wrap gap-6">
+              <div>
+                <h4 class="text-3xl font-bold text-white">50K+</h4>
+                <p class="text-slate-400">শিক্ষার্থী</p>
+              </div>
 
-              <button
-                class="px-8 py-4 rounded-2xl border border-white/30 text-white font-bold hover:bg-white/10 transition">
+              <div>
+                <h4 class="text-3xl font-bold text-white">1,200+</h4>
+                <p class="text-slate-400">কোর্স</p>
+              </div>
+
+              <div>
+                <h4 class="text-3xl font-bold text-white">300+</h4>
+                <p class="text-slate-400">প্রশিক্ষক</p>
+              </div>
+            </div>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+              <NuxtLink to="/courses"
+                class="group inline-flex items-center gap-2 rounded bg-white px-6 py-3 font-semibold text-slate-900 transition-all hover:-translate-y-1 hover:shadow-2xl">
+                কোর্স ব্রাউজ করুন
+              </NuxtLink>
+
+              <NuxtLink to="/become-instructor"
+                class="inline-flex items-center gap-2 rounded border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white backdrop-blur transition-all hover:bg-white/10">
                 শিক্ষক হিসেবে যোগ দিন
-              </button>
+              </NuxtLink>
             </div>
           </div>
 
-          <div class="hidden lg:flex justify-end">
+          <div class="relative hidden h-full lg:flex items-center justify-center">
             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
-              class="h-full object-cover" />
+              alt="Students Learning" class="h-auto w-full object-cover" />
           </div>
         </div>
       </div>
